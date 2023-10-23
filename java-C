@@ -1,0 +1,21 @@
+public class Suffle{
+    public static void main(String[] args) {
+        int arr[]={1,2,3,4,5,6,7}; //array containing 1 to 7 numbers
+        int res[]=suffle(arr); //in res array store suffle array of arr and call suffle method
+       System.out.println(Math.random());
+        for(int i=0;i<res.length;i++){  //print suffle array
+            System.out.print(res[i]+" ");
+        }
+    }
+    public static int[] suffle(int[] arr){ //suffle method, return type is int array and parameter is int array
+        int n=arr.length; //length of array store in n
+        for(int i=0;i<n;i++){ //loop from 0 to n
+            int r=(int)(Math.random()*(i+1)); //generate random number from 0 to i using Math.random() method from lang package and store in r
+            int temp=arr[r]; //arr[r] storing it in temp variable
+            arr[r]=arr[i]; //in arr[r] store arr[i] original value 
+            arr[i]=temp;//in arr[i] store temp value
+        }
+        return arr; //return suffle array
+    }
+
+}
