@@ -1,0 +1,28 @@
+public class Panagram {
+    public static void main(String[] args) {
+        String s="Hai my name is pangram";
+        System.out.println(isPanagram(s));
+    }
+    public static boolean isPanagram(String s){
+        s.toLowerCase();
+        int count=0;
+        Character c[]=new Character[26];
+        for(int i=0;i<s.length();i++){
+          if(s.charAt(i)!=' ')
+          for(int j=0;j<i;j++){
+            if(c[j]==null){
+                c[j]=s.charAt(i);
+                break;
+            }
+            else if(c[j]==s.charAt(i)){
+                break;
+            }
+        }}
+      for(int i=0;i<c.length;i++){
+          if(c[i]!=null){
+              count++;
+          }
+        }
+       return count==26;
+    }
+}
